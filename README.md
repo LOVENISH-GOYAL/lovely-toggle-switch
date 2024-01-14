@@ -36,6 +36,8 @@ function MyComponent() {
 * onChange: A callback function that will be called when the switch state changes.
 * disabled: A boolean indicating whether the switch is disabled or not.
 
+![Preview Image](images/preview.jpg)
+
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
@@ -44,3 +46,4 @@ Lovenish Goyal
 
 Changelog
 See the CHANGELOG file for details about changes.
+

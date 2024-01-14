@@ -1,6 +1,6 @@
 {
   "name": "lovely-toggle-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A toggle switch for react projects",
   "main": "./src/ToggleSwitch.js",
   "scripts": {
@@ -32,5 +32,9 @@
   },
   "dependencies": {
     "prop-types": "^15.8.1"
+  } ,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LOVENISH-GOYAL/lovely-toggle-switch"
   }
 }
