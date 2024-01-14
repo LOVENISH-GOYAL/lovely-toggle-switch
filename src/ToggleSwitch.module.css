@@ -1,0 +1,85 @@
+/* CSS Switch */
+:root {
+    --switch-background: #f0f0f0;
+    --switch-off-color: #3498db;
+    --switch-on-color: #ffffff;
+    --switch-knob-color: #ffffff;
+    --switch-checked-bg: #005a0a;
+  }
+  
+  .tglSwitch input[data-switch] {
+    display: none;
+  }
+  
+  .tglSwitch input[data-switch] + label {
+    font-size: 1em;
+    line-height: 1;
+    width: 56px;
+    height: 22px;
+    background-color: var(--switch-background);
+    border-radius: 2rem;
+    padding: 0.16667rem;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    transition: all 0.1s ease-in-out;
+    border-style: inset;
+    border-color: rgba(231, 231, 231, 0.5);
+    border-width: 2px;
+  }
+  
+  .tglSwitch input[data-switch] + label:before {
+    color: var(--switch-off-color);
+    content: attr(data-off-label);
+    display: block;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    position: absolute;
+    right: 1px;
+    margin: 3px;
+    top: -2px;
+    text-align: center;
+    min-width: 1.66667rem;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .tglSwitch input[data-switch] + label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    background-color: var(--switch-knob-color);
+    box-shadow: none;
+    border-style: outset;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 2px;
+    border-radius: 2rem;
+    height: 20px;
+    width: 20px;
+    top: 2px;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .tglSwitch input[data-switch]:checked + label {
+    background-color: var(--switch-checked-bg);
+  }
+  
+  .tglSwitch input[data-switch]:checked + label:before {
+    content: attr(data-on-label);
+    left:-25px;
+    color:#ffffff;
+  }
+  .tglSwitch input[data-switch]:checked + label:after {
+    left: calc(100% - 23px); /* Adjust the left position for checked state */
+  }
+  
+  .tglSwitch label {
+    content: ''; /* Add this line to ensure the label is visible */
+  }
+  
+  /* Rest of the styles... */
+  
