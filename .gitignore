@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/dist
 /.pnp
 .pnp.js
 
@@ -23,7 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
-package.json
 package-lock.json
 .eslintcache
 debug.log
