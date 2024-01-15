@@ -20,10 +20,10 @@ function ToggleSwitch({ keyId, checked, onChange, disabled }) {
 }
 
 ToggleSwitch.propTypes = {
-  keyId: PropTypes.string,
+  keyId: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
-  disabled: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool,
 };
 
 export default ToggleSwitch;

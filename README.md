@@ -1,6 +1,7 @@
 # lovely-toggle-switch
 
 A React switch component to toggle status.
+- [lovely-toggle-switch](https://www.npmjs.com/package/lovely-toggle-switch)@1.0.4
 
 ## Installation
 
@@ -36,7 +37,12 @@ function MyComponent() {
 * onChange: A callback function that will be called when the switch state changes.
 * disabled: A boolean indicating whether the switch is disabled or not.
 
+## Preview
 ![Preview Image](images/preview.jpg)
+
+
+
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.

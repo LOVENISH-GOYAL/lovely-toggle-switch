@@ -30,9 +30,9 @@ function ToggleSwitch(_ref) {
   }));
 }
 ToggleSwitch.propTypes = {
-  keyId: _propTypes["default"].string,
+  keyId: _propTypes["default"].string.isRequired,
   checked: _propTypes["default"].bool,
   onChange: _propTypes["default"].func,
-  disabled: _propTypes["default"].bool.isRequired
+  disabled: _propTypes["default"].bool
 };
 var _default = exports["default"] = ToggleSwitch;
