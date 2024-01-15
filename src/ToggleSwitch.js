@@ -2,25 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ToggleSwitch.module.css';
 
-function ToggleSwitch({ keyId, checked, onChange, disabled }) {
+function ToggleSwitch({ id, checked, onChange, disabled }) {
   return (
-    <div className={styles.tglSwitch}>
+    <div className={styles.toggleSwitch}>
       <input
         type="checkbox"
-        id={keyId}
-        key={keyId}
-        data-switch={'bool'}
+        id={id}
+        key={id}
+        data-switch="bool"
         checked={checked}
         onChange={onChange}
         disabled={disabled}
       />
-      <label htmlFor={keyId} data-on-label="Yes" data-off-label="No" />
+      <label htmlFor={id} data-on-label="Yes" data-off-label="No" />
     </div>
   );
 }
 
 ToggleSwitch.propTypes = {
-  keyId: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,

@@ -7,11 +7,11 @@
     --switch-checked-bg: #005a0a;
   }
   
-  .tglSwitch input[data-switch] {
+  .toggleSwitch input[data-switch] {
     display: none;
   }
   
-  .tglSwitch input[data-switch] + label {
+  .toggleSwitch input[data-switch] + label {
     font-size: 1em;
     line-height: 1;
     width: 56px;
@@ -30,7 +30,7 @@
     border-width: 2px;
   }
   
-  .tglSwitch input[data-switch] + label:before {
+  .toggleSwitch input[data-switch] + label:before {
     color: var(--switch-off-color);
     content: attr(data-off-label);
     display: block;
@@ -48,7 +48,7 @@
     transition: all 0.1s ease-in-out;
   }
   
-  .tglSwitch input[data-switch] + label:after {
+  .toggleSwitch input[data-switch] + label:after {
     content: '';
     position: absolute;
     left: 3px;
@@ -64,20 +64,20 @@
     transition: all 0.1s ease-in-out;
   }
   
-  .tglSwitch input[data-switch]:checked + label {
+  .toggleSwitch input[data-switch]:checked + label {
     background-color: var(--switch-checked-bg);
   }
   
-  .tglSwitch input[data-switch]:checked + label:before {
+  .toggleSwitch input[data-switch]:checked + label:before {
     content: attr(data-on-label);
     left:-25px;
     color:#ffffff;
   }
-  .tglSwitch input[data-switch]:checked + label:after {
+  .toggleSwitch input[data-switch]:checked + label:after {
     left: calc(100% - 23px); /* Adjust the left position for checked state */
   }
   
-  .tglSwitch label {
+  .toggleSwitch label {
     content: ''; /* Add this line to ensure the label is visible */
   }
   

@@ -1,6 +1,6 @@
 {
   "name": "lovely-toggle-switch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A toggle switch for react projects",
   "main": "./src/ToggleSwitch.js",
   "types": "types/index.d.ts",

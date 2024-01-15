@@ -18,7 +18,7 @@ function MyComponent() {
 
   return (
     <ToggleSwitch
-      keyId="myToggle-unique-id"
+      id="myToggle-unique-id"
       checked={true} // Set to `false` for an unchecked switch
        onChange={() => {
          // Your custom logic
@@ -32,7 +32,7 @@ function MyComponent() {
 
 ```
 ## Props:
-* keyId (required): A unique identifier for the toggle switch.
+* id (required): A unique identifier for the toggle switch.
 * checked: A boolean indicating whether the switch is initially checked or not.
 * onChange: A callback function that will be called when the switch state changes.
 * disabled: A boolean indicating whether the switch is disabled or not.
