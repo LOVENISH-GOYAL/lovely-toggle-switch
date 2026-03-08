@@ -1,85 +1,119 @@
-/* CSS Switch */
+/* CSS Variables for customization */
 :root {
-    --switch-background: #f0f0f0;
-    --switch-off-color: #3498db;
-    --switch-on-color: #ffffff;
-    --switch-knob-color: #ffffff;
-    --switch-checked-bg: #005a0a;
-  }
-  
-  .toggleSwitch input[data-switch] {
-    display: none;
-  }
-  
+  --switch-background: #f0f0f0;
+  --switch-off-color: #3498db;
+  --switch-on-color: #ffffff;
+  --switch-knob-color: #ffffff;
+  --switch-checked-bg: #005a0a;
+}
+
+.toggleSwitch {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.toggleSwitch input[data-switch] {
+  display: none;
+}
+
+.toggleSwitch input[data-switch] + label {
+  font-size: 1em;
+  line-height: 1;
+  width: 56px;
+  height: 22px;
+  background-color: var(--switch-background);
+  border-radius: 2rem;
+  padding: 0.16667rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+  border-style: inset;
+  border-color: rgba(231, 231, 231, 0.5);
+  border-width: 2px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.toggleSwitch input[data-switch]:disabled + label {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggleSwitch input[data-switch] + label:before {
+  color: var(--switch-off-color);
+  content: attr(data-off-label);
+  display: block;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 21px;
+  position: absolute;
+  right: 1px;
+  margin: 3px;
+  top: -2px;
+  text-align: center;
+  min-width: 1.66667rem;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.toggleSwitch input[data-switch] + label:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  background-color: var(--switch-knob-color);
+  box-shadow: none;
+  border-style: outset;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-width: 2px;
+  border-radius: 2rem;
+  height: 20px;
+  width: 20px;
+  top: 2px;
+  transition: all 0.1s ease-in-out;
+}
+
+.toggleSwitch input[data-switch]:checked + label {
+  background-color: var(--switch-checked-bg);
+}
+
+.toggleSwitch input[data-switch]:checked + label:before {
+  content: attr(data-on-label);
+  left: -25px;
+  color: var(--switch-on-color);
+}
+
+.toggleSwitch input[data-switch]:checked + label:after {
+  left: calc(100% - 23px);
+}
+
+.toggleSwitch input[data-switch]:focus + label {
+  outline: 2px solid rgba(0, 90, 10, 0.5);
+  outline-offset: 2px;
+}
+
+.toggleSwitch input[data-switch]:focus:not(:focus-visible) + label {
+  outline: none;
+}
+
+/* Accessibility improvements */
+.toggleSwitch input[data-switch]:focus-visible + label {
+  outline: 2px solid rgba(0, 90, 10, 0.5);
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   .toggleSwitch input[data-switch] + label {
-    font-size: 1em;
-    line-height: 1;
-    width: 56px;
-    height: 22px;
-    background-color: var(--switch-background);
-    border-radius: 2rem;
-    padding: 0.16667rem;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    font-weight: 500;
-    transition: all 0.1s ease-in-out;
-    border-style: inset;
-    border-color: rgba(231, 231, 231, 0.5);
-    border-width: 2px;
-  }
-  
-  .toggleSwitch input[data-switch] + label:before {
-    color: var(--switch-off-color);
-    content: attr(data-off-label);
-    display: block;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 21px;
-    position: absolute;
-    right: 1px;
-    margin: 3px;
-    top: -2px;
-    text-align: center;
-    min-width: 1.66667rem;
-    overflow: hidden;
-    transition: all 0.1s ease-in-out;
+    width: 50px;
+    height: 20px;
   }
   
   .toggleSwitch input[data-switch] + label:after {
-    content: '';
-    position: absolute;
-    left: 3px;
-    background-color: var(--switch-knob-color);
-    box-shadow: none;
-    border-style: outset;
-    border-color: rgba(0, 0, 0, 0.5);
-    border-width: 2px;
-    border-radius: 2rem;
-    height: 20px;
-    width: 20px;
-    top: 2px;
-    transition: all 0.1s ease-in-out;
+    height: 18px;
+    width: 18px;
   }
-  
-  .toggleSwitch input[data-switch]:checked + label {
-    background-color: var(--switch-checked-bg);
-  }
-  
-  .toggleSwitch input[data-switch]:checked + label:before {
-    content: attr(data-on-label);
-    left:-25px;
-    color:#ffffff;
-  }
-  .toggleSwitch input[data-switch]:checked + label:after {
-    left: calc(100% - 23px); /* Adjust the left position for checked state */
-  }
-  
-  .toggleSwitch label {
-    content: ''; /* Add this line to ensure the label is visible */
-  }
-  
-  /* Rest of the styles... */
-  
+}

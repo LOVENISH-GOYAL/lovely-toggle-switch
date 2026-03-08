@@ -1,23 +1,76 @@
 {
   "name": "lovely-toggle-switch",
-  "version": "1.0.5",
-  "description": "A toggle switch for react projects",
+  "version": "1.0.6",
+  "description": "A toggle switch component compatible with React, Angular, Vue, and vanilla JavaScript",
+  "readme": "README.md",
   "main": "./src/ToggleSwitch.js",
+  "module": "./src/ToggleSwitch.js",
+  "browser": "./src/ToggleSwitch.js",
   "types": "types/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/ToggleSwitch.js",
+      "require": "./src/ToggleSwitch.js",
+      "types": "./types/index.d.ts",
+      "default": "./src/ToggleSwitch.js"
+    },
+    "./web": {
+      "import": "./src/ToggleSwitch.web.js",
+      "require": "./src/ToggleSwitch.web.js",
+      "default": "./src/ToggleSwitch.web.js"
+    },
+    "./react": {
+      "import": "./src/ToggleSwitch.js",
+      "require": "./src/ToggleSwitch.js",
+      "types": "./types/index.d.ts",
+      "default": "./src/ToggleSwitch.js"
+    },
+    "./styles": "./src/ToggleSwitch.module.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "babel src -d dist",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "form",
     "toggle",
     "switch",
-    "button"
+    "form",
+    "button",
+    "react",
+    "angular",
+    "vue",
+    "web-component",
+    "framework-agnostic",
+    "checkbox"
   ],
   "author": "Lovenish Goyal",
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.23.7",
+    "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
     "@babel/preset-react": "^7.23.3",
     "@testing-library/jest-dom": "^6.2.0",
@@ -33,7 +86,7 @@
   },
   "dependencies": {
     "prop-types": "^15.8.1"
-  } ,
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/LOVENISH-GOYAL/lovely-toggle-switch"
